@@ -187,56 +187,16 @@ A simple calculator built using **JavaScript DOM manipulation**.
 - Performs basic arithmetic operations: ➕ ➖ ✖ ➗  
 - Interactive UI using buttons and a display area  
 - Great example of handling **events & updating the DOM** dynamically
-  
-## Code example:
-```js
-    function appendValue(value) {
-      document.getElementById("display").value += value;
-    }
+![Calculator Demo](calculator.gif)
 
-    function clearDisplay() {
-      document.getElementById("display").value = "";
-    }
-
-    function calculate() {
-      try {
-        let expression = document.getElementById("display").value;
-        let result = eval(expression);
-        document.getElementById("display").value = result;
-      } catch (error) {
-        document.getElementById("display").value = "Error";
-      }
-    }
-  ```
   ### To-do list:
   A minimal To-Do List app made with jQuery.
 
   - Add, remove, and mark tasks as complete
 
    - Demonstrates event handling and DOM manipulation with jQuery
+![To-do-list](todo.gif)
 
-## Code example:
-
-```js
-    $(document).ready(function(){
-      // Add task
-      $("#addTask").click(function(){
-        let task = $("#taskInput").val().trim();
-          $("#taskList").append(
-            `<li>
-              <span class="task-text">${task}</span>
-              <button class="delete-btn">❌</button>
-            </li>`
-          );
-          $("#taskInput").val(""); 
-      });
-
-      // Delete task
-      $(document).on("click", ".delete-btn", function(){
-        $(this).parent().remove();
-      });
-    });
-  ```
 
 ## 📅 Timeline
 
