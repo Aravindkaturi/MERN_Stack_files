@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple To-Do List</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h2>My To-Do List</h2>
+  <input type="text" id="taskInput" placeholder="Enter a task">
+  <button id="addTask">➕</button>
+  <ol id="taskList"></ol>
+
+  <script>
+    $(document).ready(function(){
+      // Add task
+      $("#addTask").click(function(){
+        let task = $("#taskInput").val().trim();
+          $("#taskList").append(
+            `<li>
+              <span class="task-text">${task}</span>
+              <button class="delete-btn">❌</button>
+            </li>`
+          );
+          $("#taskInput").val(""); 
+      });
+
+      // Delete task
+      $(document).on("click", ".delete-btn", function(){
+        $(this).parent().remove();
+      });
+    });
+  </script>
+
+</body>
+</html>
