@@ -187,6 +187,8 @@ A simple calculator built using **JavaScript DOM manipulation**.
 - Performs basic arithmetic operations: ➕ ➖ ✖ ➗  
 - Interactive UI using buttons and a display area  
 - Great example of handling **events & updating the DOM** dynamically
+
+  
 ![Calculator Demo](calculator.gif)
 
   ### To-do list:
@@ -195,6 +197,8 @@ A simple calculator built using **JavaScript DOM manipulation**.
   - Add, remove, and mark tasks as complete
 
    - Demonstrates event handling and DOM manipulation with jQuery
+
+     
 ![To-do-list](todo.gif)
 
 
