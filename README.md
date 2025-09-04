@@ -15,8 +15,10 @@ This README contains quick reference notes on **JavaScript fundamentals**, **Clo
 - [💡 jQuery](#-jquery)  
 - [🍃 MongoDB](#-mongodb)  
   - [MongoDB Hierarchy](#-mongodb-hierarchy)  
-  - [Basic Commands](#-basic-commands)  
-- [📅 Timeline](#-timeline)  
+  - [Basic Commands](#-basic-commands)
+- [sample projects](#-Sample-projects)
+- [📅 Timeline](#-timeline)
+
 
 ---
 
@@ -179,9 +181,67 @@ db.users.deleteMany({active: false})
 ```
 ## ⚠ Note: In MongoDB, a database or collection is not created until it gets content.
 
+# Sample-projects
+### 🔢 Calculator (DOM Manipulation in JavaScript)  
+A simple calculator built using **JavaScript DOM manipulation**.  
+- Performs basic arithmetic operations: ➕ ➖ ✖ ➗  
+- Interactive UI using buttons and a display area  
+- Great example of handling **events & updating the DOM** dynamically
+  
+## Code example:
+```js
+    function appendValue(value) {
+      document.getElementById("display").value += value;
+    }
+
+    function clearDisplay() {
+      document.getElementById("display").value = "";
+    }
+
+    function calculate() {
+      try {
+        let expression = document.getElementById("display").value;
+        let result = eval(expression);
+        document.getElementById("display").value = result;
+      } catch (error) {
+        document.getElementById("display").value = "Error";
+      }
+    }
+  ```
+  ### To-do list:
+  A minimal To-Do List app made with jQuery.
+
+  - Add, remove, and mark tasks as complete
+
+   - Demonstrates event handling and DOM manipulation with jQuery
+
+## Code example:
+
+```js
+    $(document).ready(function(){
+      // Add task
+      $("#addTask").click(function(){
+        let task = $("#taskInput").val().trim();
+          $("#taskList").append(
+            `<li>
+              <span class="task-text">${task}</span>
+              <button class="delete-btn">❌</button>
+            </li>`
+          );
+          $("#taskInput").val(""); 
+      });
+
+      // Delete task
+      $(document).on("click", ".delete-btn", function(){
+        $(this).parent().remove();
+      });
+    });
+  ```
+
 ## 📅 Timeline
 
 📌 02-09-2025 to 03-09-2025 → JavaScript, Closures, Callbacks, jQuery
+
 📌 04-09-2025 → MongoDB,Express
 
 
