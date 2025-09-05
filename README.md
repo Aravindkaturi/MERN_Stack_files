@@ -1,6 +1,6 @@
-# 📘 JavaScript, jQuery & MongoDB Notes  
+# 📘 MERN Stack Notes  
 
-This README contains quick reference notes on **JavaScript fundamentals**, **Closures**, **Callbacks**, **jQuery**, and **MongoDB**.  
+This README contains quick reference notes on **Mongodb**,**Express**,**React**,**Node**.  
 
 ---
 
